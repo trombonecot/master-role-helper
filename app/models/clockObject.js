@@ -18,11 +18,13 @@ define(function(){
     }
 
     ClockObject.prototype.run = function(){
+        var that = this;
         if (this.running){
-            
             this.time = this.time + 1000;
-
-            setTimeout(this.run, 1000);
+            var callRun = function(){
+                that.run();
+            }
+            setTimeout( callRun, 1000);
         }
     }
 
