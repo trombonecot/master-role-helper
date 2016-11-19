@@ -4,7 +4,9 @@ define([ "./../models/eventObject",
 
     function(EventObject, LocationObject, MockedData) {   
 
-        var timeIndex = {};
+        var timeIndex = {
+            hola: 1
+        };
         
 
         return {
